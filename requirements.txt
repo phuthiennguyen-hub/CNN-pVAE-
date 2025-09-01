@@ -1,0 +1,13 @@
+# Project: data3d - viscoelastic open cell foam (IAM RWTH Aachen)
+# For more info:
+# Nguyen Thien Phu, Uwe Navrath, Yousef Heider, Julaluk Carmai, Bernd Markert
+# "Investigating the impact of deformation on foam permeability through CT scans and the Lattice-Boltzmann method"
+# Published: 27 Nov 2023, https://doi.org/10.1002/pamm.202300154
+
+tensorflow
+numpy
+scikit-image
+matplotlib
+torch
+torchvision
+pillow
