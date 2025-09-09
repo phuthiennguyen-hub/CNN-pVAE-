@@ -1,6 +1,27 @@
-# Variational Autoencoder for 3D BMP Images
+## Property - Variational Autoencoder (pVAE) for BMP Images
 
-This project implements a Variational Autoencoder (VAE) designed to process and analyze 3D BMP images. The VAE architecture is capable of learning a compressed representation of the input images, allowing for efficient reconstruction and generation of new samples.
+The pVAE framework is trained on two datasets: a synthetic dataset of artificial porous microstructures and CT-scan images of volume elements from real open-cell foams. The encoder-decoder architecture of the VAE captures key microstructural features, mapping them into a compact and interpretable latent space for efficient structure-property exploration. The study provides a detailed analysis and interpretation of the latent space, demonstrating its role in structure-property mapping, interpolation, and inverse design. This approach facilitates the generation of new metamaterials with desired properties
+
+## Copyright
+
+ © Prof. Dr.-Ing. habil. Fadi Aldakheel
+
+ Leibniz Universität Hannover 
+
+ Faculty of Civil Engineering and Geodetic Science 
+
+ Institut für Baumechanik und Numerische Mechanik (IBNM)
+
+ https://www.ibnm.uni-hannover.de
+ 
+
+ Coded by Phu Thien Nguyen with the help of Copilot
+
+ 
+
+ Paper: Deep learning-aided inverse design of porous metamaterials
+ The authors are:
+ Phu Thien Nguyen, Yousef Heider, Dennis Kochmann, Fadi Aldakheel
 
 ## Project Structure
 
