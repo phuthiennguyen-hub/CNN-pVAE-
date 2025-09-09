@@ -20,6 +20,7 @@ The pVAE framework is trained on two datasets: a synthetic dataset of artificial
  
 
  Paper: Deep learning-aided inverse design of porous metamaterials
+ 
  The authors are:
  Phu Thien Nguyen, Yousef Heider, Dennis Kochmann, Fadi Aldakheel
 
