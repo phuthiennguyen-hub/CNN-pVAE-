@@ -29,13 +29,14 @@ The pVAE framework is trained on two datasets: a synthetic dataset of artificial
 ```
 vae-3d-bmp
 ├── src
-│   ├── model.py           # Defines the VAE architecture
-│   ├── train.py           # Contains the training loop for the VAE
-│   ├── train_vae_tune.py  # Contains the ray tune framework for hyperparameter tuning
-│   ├── evaluate.py        # Evaluates the performance of the trained VAE
-│   ├── latent_extract.py  # Extract the latent space
-│   ├── interpolation.py   # The sphearical interpolation (Slerp)
-│   ├── inverse.py         # Inverse process with target properties
+│   ├── model.py                # Defines the VAE architecture
+│   ├── train.py                # Contains the training loop for the VAE
+│   ├── train_vae_tune.py       # Contains the ray tune framework for hyperparameter tuning
+│   ├── evaluate.py             # Evaluates the performance of the trained VAE
+│   ├── latent_extract.py       # Extract the latent space
+│   ├── interpolation.py        # The sphearical interpolation (Slerp)
+│   ├── inverse.py              # Inverse process with target properties
+│   ├── iniRandint_inverse.py   # Inverse process with uniform random target properties created by python
 │   └── utils
 │       └── data_loader.py # Utility functions for loading and preprocessing data
 ├── data
