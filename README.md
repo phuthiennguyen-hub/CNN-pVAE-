@@ -76,13 +76,13 @@ For more details, see: Kingma & Welling (2013), *Auto-Encoding Variational Bayes
 The **Kullback–Leibler (KL) divergence** measures how one probability distribution differs from another:
 
 $$
-D_\text{KL}(\infdiv{p}{q}) = \sum_{x \in X} p(x) \log \frac{p(x)}{q(x)} = \sum_{x \in X} p(x) \log (p(x)) - \sum_{x \in X} p(x) \log (q(x))
+D_\text{KL}(p \parallel q) = \sum_{x \in X} p(x) \log \frac{p(x)}{q(x)} = \sum_{x \in X} p(x) \log (p(x)) - \sum_{x \in X} p(x) \log (q(x))
 $$
 
 The first term is negative entropy (-H) and the second term is negative cross-entropy (-CE). $D_\text{KL} = CE -H$.
 
 $$
-D_\text{KL}(\infdiv{p}{q}) = - \sum_{x \in X} p(x) \log \frac{q(x)}{p(x)} = - E_{p} \left[ \log \frac{q(x)}{p(x)} \right] \text{with} E(x) = \sum_{x \in X} p(x)
+D_\text{KL}(p \parallel q) = - \sum_{x \in X} p(x) \log \frac{q(x)}{p(x)} = - E_{p} \left[ \log \frac{q(x)}{p(x)} \right] \text{with} E(x) = \sum_{x \in X} p(x)
 $$
 
 Jensen inequality:
