@@ -56,6 +56,9 @@ PAMM, 2023. [https://doi.org/10.1002/pamm.202300154]
 
 ## A surrogated model: Multiscale CNN-based intrinsic permeability prediction
 
+<p align="center">
+  <img src="assets/CNN-Structure_initial.png" width="400">
+</p>
 
 **Reference:**  
 Yousef Heider, Fadi Aldakheel, Wolfgang Ehlers.
