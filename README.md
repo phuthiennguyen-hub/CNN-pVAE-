@@ -54,11 +54,11 @@ Nguyen Thien Phu, Uwe Navrath, Yousef Heider, Julaluk Carmai, Bernd Markert.
 *Investigating the impact of deformation on foam permeability through CT scans and the Lattice–Boltzmann method*.  
 PAMM, 2023. [https://doi.org/10.1002/pamm.202300154]
 
-## A surrogated model: 3D CNN model for intrinsic permeability prediction
+## A surrogated model: Multiscale CNN-based intrinsic permeability prediction
 
 
 **Reference:**  
-Yousef Heider, Fadi Aldakheel, and Wolfgang Ehlers.
+Yousef Heider, Fadi Aldakheel, Wolfgang Ehlers.
 *A multiscale CNN-based intrinsic permeability prediction in deformable porous media*
 Applied Sciences, 15(5):2589, 2025.
 
