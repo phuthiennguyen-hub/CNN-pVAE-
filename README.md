@@ -134,11 +134,28 @@ Since this integral is intractable, we approximate it using **variational infere
 ---
 
 ### 3. Driving the ELBO Loss
-A VAE learns stochastic mapping between an observed $\mathbf{x}$-space (true space), whose empirical distribution $q_{\mathcal{D}}(\mathbf{x})$ is typically complicated, and a $$$\mathbf{z}$-space (latent space), whose distribution can be relatively simple. The generative model learns a joint distribution $p_{\mathbf{\theta}}(\mathbf{x}, \mathbf{z})$ that is often factorized as $p_{\mathbf{\theta}}(\mathbf{x}, \mathbf{z}) = p_{\mathbf{\theta}}(\mathbf{z}) p_{\mathbf{\theta}}(\mathbf{x}|\mathbf{z})$, with a prior distribution over latent space $p_{\mathbf{\theta}}(\mathbf{z})$, a stochastic decoder $p_{\mathbf{\theta}}(\mathbf{x}|\mathbf{z})$. The stochastic encoder $q_{\mathbf{\phi}}(\mathbf{z}|\mathbf{x})$, also called **inference model**, approximates the true but intractable posterior $p_{\mathbf{\theta}}(\mathbf{z}|\mathbf{x})$ of the generative model.
+A VAE learns stochastic mapping between an observed $\mathbf{x}$-space (true space), whose empirical distribution $q_{\mathcal{D}}(\mathbf{x})$ is typically complicated, and a $\mathbf{z}$-space (latent space), whose distribution can be relatively simple. The generative model learns a joint distribution $p_{\mathbf{\theta}}(\mathbf{x}, \mathbf{z})$ that is often factorized as $p_{\mathbf{\theta}}(\mathbf{x}, \mathbf{z}) = p_{\mathbf{\theta}}(\mathbf{z}) p_{\mathbf{\theta}}(\mathbf{x}|\mathbf{z})$, with a prior distribution over latent space $p_{\mathbf{\theta}}(\mathbf{z})$, a stochastic decoder $p_{\mathbf{\theta}}(\mathbf{x}|\mathbf{z})$. The stochastic encoder $q_{\mathbf{\phi}}(\mathbf{z}|\mathbf{x})$, also called **inference model**, approximates the true but intractable posterior $p_{\mathbf{\theta}}(\mathbf{z}|\mathbf{x})$ of the generative model.
 
 <p align="center">
   <img src="assets/VAE-ELBO.png" width="500">
 </p>
+
+For any choice of **inference model**, including the choice of variational parameters $\mathbf{\phi}$, we have:
+
+$$
+\log p_\theta(\mathbf{x}) 
+= \mathbb{E}_{q_\phi(\mathbf{z}|\mathbf{x})} \big[ \log p_\theta(\mathbf{x}) \big].
+
+\log p_\theta(\mathbf{x})
+= \mathbb{E}_{q_\phi(\mathbf{z}|\mathbf{x})} 
+\left[ \log \frac{p_\theta(\mathbf{x}, \mathbf{z})}{p_\theta(\mathbf{z}|\mathbf{x})} \right]
+
+\log p_\theta(\mathbf{x}) 
+= \mathbb{E}_{q_\phi(\mathbf{z}|\mathbf{x})} 
+\left[ \log \frac{p_\theta(\mathbf{x}, \mathbf{z})}{q_\phi(\mathbf{z}|\mathbf{x})} \right]
++ \mathbb{E}_{q_\phi(\mathbf{z}|\mathbf{x})} 
+\left[ \log \frac{q_\phi(\mathbf{z}|\mathbf{x})}{p_\theta(\mathbf{z}|\mathbf{x})} \right].
+$$
 
 
 The **Evidence Lower Bound (ELBO)** is maximized to train the VAE:
