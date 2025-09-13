@@ -218,10 +218,24 @@ Thus, the VAE balances reconstruction quality with latent space regularization.
 
 ### 4. KL Divergence for Standard Normal
 
-When the prior is chosen as a **standard normal distribution** $p(z) = \mathcal{N}(0, I)$ and the encoder outputs a Gaussian $q_\phi(z|x) = \mathcal{N}(\mu, \sigma^2 I)$, the KL divergence has a closed form:
+When the prior is chosen as a **standard normal distribution** $p(z) = \mathcal{N}(\mathbf{0}, \mathbf{I})$ and the encoder outputs a Gaussian $q_\phi(z|x) = \mathcal{N}(\mu, \sigma^2)$, the KL divergence has a closed form:
 
 $$
-D_\text{KL}\big(\mathcal{N}(\mu, \sigma^2 I)\,\|\,\mathcal{N}(0, I)\big) 
+D_\text{KL}\big(\mathcal{N}(\mu, \sigma^2 I) \parallel \mathcal{N}(mathbf{0}, \mathbf{I})\big)
+$$
+
+$$
+D_\text{KL}\big(q_\phi(z|x) \parallel p(z)\big) = \mathbb{E}_{q_\phi(\mathbf{z}|\mathbf{x})} \big[ \log \frac{q_\phi(\mathbf{z}|\mathbf{x})}{p(\mathbf{z})} \big]
+$$
+
+Given a dataset with i.i.d data (discete variable):
+
+$$
+D_\text{KL}\big(q_\phi(z|x) \parallel p(z)\big) = \sum_{\mathbf{x} \in \mathbb{D}} \frac{1}{\sqrt{2\pi\sigma^2}} e^{-\frac{1}{2}{\left( \frac{x - \mu}{\sigma} \right)}^2} \log \big[ \frac{ \frac{1}{\sqrt{2\pi\sigma^2}} e^{-\frac{1}{2}{\left( \frac{x - \mu}{\sigma} \right)}^2}}{ \frac{1}{\sqrt{2\pi\mathbf{I}^2}} e^{-\frac{1}{2}{\left( \frac{x - \mathbf{0}}{\mathbf{I}} \right)}^2}} \big]
+$$
+
+$$
+D_\text{KL}\big(\mathcal{N}(\mu, \sigma^2 I) \parallel \mathcal{N}(0, I)\big) 
 = \tfrac{1}{2} \sum_{i=1}^d \left( \mu_i^2 + \sigma_i^2 - \log \sigma_i^2 - 1 \right)
 $$
 
