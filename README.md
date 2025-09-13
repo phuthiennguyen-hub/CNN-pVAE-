@@ -88,13 +88,13 @@ $$
 Jensen inequality: $E[f(x)] \geq f(E(x)) \rightarrow \text{convex function}$ and $E[f(x)] \leq f(E(x)) \rightarrow \text{concave function}$
 
 $$
-- E_{p} \left[ \log \frac{q(x)}{p(x)} \right] \leq - \log \left[ E_{p} \left[ \frac{q(x)}{p(x)} \right] \right]
+\- E_{p} \left[ \log \frac{q(x)}{p(x)} \right] \leq - \log \left[ E_{p} \left[ \frac{q(x)}{p(x)} \right] \right]
 $$
 
 The right side: 
 
 $$
-- \log \left[ E_{p} \left[ \frac{q(x)}{p(x)} \right] \right] = - \log \left[ \sum_{x} p(x) \left[ \frac{q(x)}{p(x)} \right] \right] = - \log (1) = 0
+\- \log \left[ E_{p} \left[ \frac{q(x)}{p(x)} \right] \right] = - \log \left[ \sum_{x} p(x) \left[ \frac{q(x)}{p(x)} \right] \right] = - \log (1) = 0
 $$
 
 From that, we have:
