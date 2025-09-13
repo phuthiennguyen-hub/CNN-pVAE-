@@ -25,7 +25,7 @@ Estimating the intrinsic permeability tensor $\mathbf{K}^S$ is more challenging 
 - From the LBM, we obtain the microscopic **velocity field** $\mathbf{u}(\mathbf{x})$.  
 
 <p align="center">
-  <img src="assets/lbm_illustraion.jpg" width="400">
+  <img src="assets/lbm_illustraion.jpg" width="500">
 </p>
 
 The homogenized velocity is computed by volume averaging:
@@ -57,7 +57,7 @@ PAMM, 2023. [https://doi.org/10.1002/pamm.202300154]
 ## A surrogated model: Multiscale CNN-based intrinsic permeability prediction
 
 <p align="center">
-  <img src="assets/CNN-Structure_initial.png" width="400">
+  <img src="assets/CNN-Structure_initial.png" width="600">
 </p>
 
 **Reference:**  
