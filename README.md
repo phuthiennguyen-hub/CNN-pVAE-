@@ -85,7 +85,9 @@ $$
 D_\text{KL}(p||q) = - \sum_{x \in X} p(x) \log \frac{q(x)}{p(x)} = - E_{p} \left[ \log \frac{q(x)}{p(x)} \right] \text{with} E(x) = \sum_{x \in X} p(x)
 $$
 
-Jensen inequality: $E[f(x)] \geq f(E(x)) \rightarrow \text{convex function}$ and $E[f(x)] \leq f(E(x)) \rightarrow \text{concave function}$
+Jensen inequality:
+- $E[f(x)] \geq f(E(x)) \rightarrow \text{convex function}$
+- $E[f(x)] \leq f(E(x)) \rightarrow \text{concave function}$
 
 $$
 \- E_{p} \left[ \log \frac{q(x)}{p(x)} \right] \leq - \log \left[ E_{p} \left[ \frac{q(x)}{p(x)} \right] \right]
@@ -100,7 +102,7 @@ $$
 From that, we have:
 
 $$
-D_\text{KL} = - \sum p(x) \log \frac{q(x)}{p(x)} \geq 0 \rightarrow D_\text{KL} \leq 0
+D_\text{KL} = - \sum p(x) \log \frac{q(x)}{p(x)} \geq 0 \Rightarrow D_\text{KL} \leq 0
 $$
 
 The KL divergence have to equal or larger than zero.
