@@ -221,7 +221,7 @@ Thus, the VAE balances reconstruction quality with latent space regularization.
 When the prior is chosen as a **standard normal distribution** $p(z) = \mathcal{N}(\mathbf{0}, \mathbf{I})$ and the encoder outputs a Gaussian $q_\phi(z|x) = \mathcal{N}(\mu, \sigma^2)$, the KL divergence has a closed form:
 
 $$
-D_\text{KL}\big(\mathcal{N}(\mu, \sigma^2 I) \parallel \mathcal{N}(mathbf{0}, \mathbf{I})\big)
+D_\text{KL}\big(\mathcal{N}(\mu, \sigma^2 I) \parallel \mathcal{N}(\mathbf{0}, \mathbf{I})\big)
 $$
 
 $$
