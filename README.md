@@ -25,7 +25,7 @@ Estimating the intrinsic permeability tensor $\mathbf{K}^S$ is more challenging 
 - From the LBM, we obtain the microscopic **velocity field** $\mathbf{u}(\mathbf{x})$.  
 
 <p align="center">
-  <img src="assets/lbm_illustraion.png" width="400">
+  <img src="assets/lbm_illustraion.pdf" width="400">
 </p>
 
 The homogenized velocity is computed by volume averaging:
