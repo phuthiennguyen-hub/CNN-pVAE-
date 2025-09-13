@@ -112,6 +112,7 @@ The KL divergence must be equal or larger than zero.
 ### 2. Variational Inference
 
 Bayes theorem:
+
 $$
 p(z|x) = \frac{p(x|z)p(z)}{p(x)}
 $$
