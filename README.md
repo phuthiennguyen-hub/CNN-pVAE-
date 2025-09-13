@@ -85,21 +85,21 @@ $$
 The first term is negative entropy (-H) and the second term is negative cross-entropy (-CE). $D_\text{KL} = CE -H$.
 
 $$
-D_\text{KL}(p \parallel q) = - \sum_{x \in X} p(x) \log \frac{q(x)}{p(x)} = - E_{p} \left[ \log \frac{q(x)}{p(x)} \right] \text{ with } E(f(x)) = \sum_{x \in X} p(x)f(x)
+D_\text{KL}(p \parallel q) = - \sum_{x \in X} p(x) \log \frac{q(x)}{p(x)} = - \mathbb{E}_{p} \left[ \log \frac{q(x)}{p(x)} \right] \text{ with } \mathbb{E}(f(x)) = \sum_{x \in X} p(x)f(x)
 $$
 
 Jensen inequality:
-- $E[f(x)] \geq f(E(x)) \rightarrow \text{convex function}$
-- $E[f(x)] \leq f(E(x)) \rightarrow \text{concave function}$
+- $\mathbb{E}[f(x)] \geq f(\mathbb{E}(x)) \rightarrow \text{convex function}$
+- $\mathbb{E}[f(x)] \leq f(\mathbb{E}(x)) \rightarrow \text{concave function}$
 
 $$
-\- E_{p} \left[ \log \frac{q(x)}{p(x)} \right] \leq - \log \left[ E_{p} \left[ \frac{q(x)}{p(x)} \right] \right]
+\- \mathbb{E}_{p} \left[ \log \frac{q(x)}{p(x)} \right] \leq - \log \left[ \mathbb{E}_{p} \left[ \frac{q(x)}{p(x)} \right] \right]
 $$
 
 The right side: 
 
 $$
-\- \log \left[ E_{p} \left[ \frac{q(x)}{p(x)} \right] \right] = - \log \left[ \sum_{x} p(x) \left[ \frac{q(x)}{p(x)} \right] \right] = - \log (1) = 0
+\- \log \left[ \mathbb{E}_{p} \left[ \frac{q(x)}{p(x)} \right] \right] = - \log \left[ \sum_{x} p(x) \left[ \frac{q(x)}{p(x)} \right] \right] = - \log (1) = 0
 $$
 
 From that, we have:
@@ -152,9 +152,9 @@ $$
 - Since $\log p_{\theta}(\mathbf{x})$ is constant w.r.t. $\mathbf{z}$, we can rewrite
 
 $$
-\log p_{\theta}(\mathbf{x})
+\log p_\theta(\mathbf{x})
 = \mathbb{E}_{q_\phi(\mathbf{z}|\mathbf{x})} 
-\left[ \log \frac{p_\theta(\mathbf{x}, \mathbf{z})}{p_\theta(\mathbf{z}|\mathbf{x})} \right]
+\left[\log \frac{p_\theta(\mathbf{x}, \mathbf{z})}{p_\theta(\mathbf{z}|\mathbf{x})} \right].
 $$
 
 – Add and subtract $\log q_\phi(\mathbf{z}|\mathbf{x})$
