@@ -105,7 +105,7 @@ $$
 From that, we have:
 
 $$
-D_\text{KL} = - \sum p(x) \log \frac{q(x)}{p(x)} \geq 0 \Rightarrow D_\text{KL} \leq 0
+D_\text{KL} = - \sum p(x) \log \frac{q(x)}{p(x)} \leq 0 \Rightarrow D_\text{KL} \geq 0
 $$
 
 The KL divergence must be equal or larger than zero.
