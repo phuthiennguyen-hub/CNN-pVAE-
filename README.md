@@ -82,7 +82,7 @@ $$
 The first term is negative entropy (-H) and the second term is negative cross-entropy (-CE). $D_\text{KL} = CE -H$.
 
 $$
-D_\text{KL}(p \parallel q) = - \sum_{x \in X} p(x) \log \frac{q(x)}{p(x)} = - E_{p} \left[ \log \frac{q(x)}{p(x)} \right] \text{with} E(x) = \sum_{x \in X} p(x)
+D_\text{KL}(p \parallel q) = - \sum_{x \in X} p(x) \log \frac{q(x)}{p(x)} = - E_{p} \left[ \log \frac{q(x)}{p(x)} \right] \text{ with } E(x) = \sum_{x \in X} x p(x)
 $$
 
 Jensen inequality:
