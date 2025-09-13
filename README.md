@@ -204,13 +204,13 @@ $$
 The **Evidence Lower Bound (ELBO)** is maximized to train the VAE:
 
 $$
-\log p_\theta(x) \geq 
-\mathbb{E}_{q_\phi(z|x)}[\log p_\theta(x|z)] - D_\text{KL}\big(q_\phi(z|x) \parallel p(z)\big)
+\log p_\theta(\mathbf{x}) \geq 
+\mathbb{E}_{q_\phi(\mathbf{z}|\mathbf{x})}[\log p_\theta(\mathbf{x}|\mathbf{z})] - D_\text{KL}\big(q_\phi(\mathbf{z}|\mathbf{x}) \parallel p(\mathbf{z})\big)
 $$
 
 The ELBO has two competing terms:  
-- **Reconstruction term**: encourages accurate data reconstruction via the decoder $p_\theta(x|z)$  
-- **Regularization term**: forces $q_\phi(z|x)$ to be close to the prior $p(z)$  
+- **Reconstruction term**: encourages accurate data reconstruction via the decoder $p_\theta(\mathbf{x}|\mathbf{z})$  
+- **Regularization term**: forces $q_\phi(\mathbf{z}|\mathbf{x})$ to be close to the prior $p(\mathbf{z})$  
 
 Thus, the VAE balances reconstruction quality with latent space regularization.
 
