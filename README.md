@@ -143,7 +143,7 @@ A VAE learns stochastic mapping between an observed $\mathbf{x}$-space (true spa
 For any choice of **inference model**, including the choice of variational parameters $\mathbf{\phi}$, we have:
 
 - The log marginal likelihood can be expressed as an expectation
-- 
+  
 $$
 \log p_\theta(\mathbf{x}) 
 = \mathbb{E}_{q_\phi(\mathbf{z}|\mathbf{x})} \big[ \log p_\theta(\mathbf{x}) \big].
