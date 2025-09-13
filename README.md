@@ -1,4 +1,4 @@
-## Property - Variational Autoencoder (pVAE) for inverse design
+## Property-variational Autoencoder (pVAE) for inverse design
 
 The pVAE framework is trained on two datasets: a synthetic dataset of artificial porous microstructures and CT-scan images of volume elements from real open-cell foams. The encoder-decoder architecture of the VAE captures key microstructural features, mapping them into a compact and interpretable latent space for efficient structure-property exploration. The study provides a detailed analysis and interpretation of the latent space, demonstrating its role in structure-property mapping, interpolation, and inverse design. This approach facilitates the generation of new metamaterials with desired properties
 
@@ -53,6 +53,14 @@ Thus, $\mathbf{K}^S$ can be determined from the relationship between the average
 Nguyen Thien Phu, Uwe Navrath, Yousef Heider, Julaluk Carmai, Bernd Markert.  
 *Investigating the impact of deformation on foam permeability through CT scans and the Lattice–Boltzmann method*.  
 PAMM, 2023. [https://doi.org/10.1002/pamm.202300154]
+
+## A surrogated model: 3D CNN model for intrinsic permeability prediction
+
+
+**Reference:**  
+Yousef Heider, Fadi Aldakheel, and Wolfgang Ehlers.
+*A multiscale CNN-based intrinsic permeability prediction in deformable porous media*
+Applied Sciences, 15(5):2589, 2025.
 
 ## Probability-variational autoencoder (pVAE)
 
@@ -153,8 +161,8 @@ vae-3d-bmp
 │   └── utils
 │       └── data_loader.py # Utility functions for loading and preprocessing data
 ├── data
-│   ├── data3D150          # Directory containing 3D BMP images 100x100x100
-│   ├── data3D150.csv      # Effective Properties for 3D BMP images 100x100x100
+│   ├── data3D150          # Directory containing 3D BMP images 150x150x150
+│   ├── data3D150.csv      # Effective Properties for 3D BMP images 150x150x150
 │   ├── syn-data.ipynb     # Notebook for creating synthetic data (100x100x100), random pore position is uniform distribution
 ├── requirements.txt       # Lists the required Python dependencies and data information
 ├── .gitignore             # Specifies files to be ignored by Git
