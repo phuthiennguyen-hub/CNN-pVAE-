@@ -76,10 +76,33 @@ For more details, see: Kingma & Welling (2013), *Auto-Encoding Variational Bayes
 The **Kullback–Leibler (KL) divergence** measures how one probability distribution differs from another:
 
 $$
-D_\text{KL}(q(z) \,\|\, p(z)) = \int q(z) \log \frac{q(z)}{p(z)} \, dz
+D_\text{KL}(p||q) = \sum_{x \in X} p(x) \log \frac{p(x)}{q(x)} = \sum_{x \in X} p(x) \log (p(x)) - \sum_{x \in X} p(x) \log (q(x))
 $$
 
-It acts as a penalty term in VAE training, ensuring that the approximate posterior $q_\phi(z|x)$ stays close to the prior $p(z)$.
+The first term is negative entropy (-H) and the second term is negative cross-entropy (-CE). $D_\text{KL} = CE -H$.
+$$
+D_\text{KL}(p||q) = - \sum_{x \in X} p(x) \log \frac{q(x)}{p(x)} = - E_{p} \left[ \log \frac{q(x)}{p(x)} \right] \text{with} E(x) = \sum_{x \in X} p(x)
+$$
+
+Jensen inequality: $E[f(x)] \geq f(E(x)) \rightarrow \text{convex function}$ and $E[f(x)] \leq f(E(x)) \rightarrow \text{concave function}$
+
+$$
+- E_{p} \left[ \log \frac{q(x)}{p(x)} \right] \leq - \log \left[ E_{p} \left[ \frac{q(x)}{p(x)} \right] \right]
+$$
+
+The right side: 
+
+$$
+- \log \left[ E_{p} \left[ \frac{q(x)}{p(x)} \right] \right] = - \log \left[ \sum_{x} p(x) \left[ \frac{q(x)}{p(x)} \right] \right] = - \log (1) = 0
+$$
+
+From that, we have:
+
+$$
+D_\text{KL} = - \sum p(x) \log \frac{q(x)}{p(x)} \geq 0 \rightarrow D_\text{KL} \leq 0
+$$
+
+The KL divergence have to equal or larger than zero.
 
 ---
 
@@ -161,9 +184,9 @@ vae-3d-bmp
 │   └── utils
 │       └── data_loader.py # Utility functions for loading and preprocessing data
 ├── data
-│   ├── data3D150          # Directory containing 3D BMP images 150x150x150
-│   ├── data3D150.csv      # Effective Properties for 3D BMP images 150x150x150
-│   ├── syn-data.ipynb     # Notebook for creating synthetic data (100x100x100), random pore position is uniform distribution
+│   ├── data3D200          # Directory containing 3D BMP images ($200^3$)
+│   ├── data3D200.csv      # Effective Properties for 3D BMP images ($200^3$)
+│   ├── syn-data.ipynb     # Notebook for creating synthetic data ($100^3$), random pore position is uniform distribution
 ├── requirements.txt       # Lists the required Python dependencies and data information
 ├── .gitignore             # Specifies files to be ignored by Git
 └── README.md              # Documentation for the project
