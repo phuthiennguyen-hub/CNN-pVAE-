@@ -62,7 +62,7 @@ Yousef Heider, Fadi Aldakheel, and Wolfgang Ehlers.
 *A multiscale CNN-based intrinsic permeability prediction in deformable porous media*
 Applied Sciences, 15(5):2589, 2025.
 
-## Probability-variational autoencoder (pVAE)
+## Variational autoencoder (VAE)
 
 The Variational Autoencoder (VAE), introduced in 2013, is one of the most influential generative models.  
 It combines **deep learning** with **probabilistic inference**, enabling the mapping between high-dimensional data and a structured latent space.  
