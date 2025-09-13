@@ -156,7 +156,7 @@ $$
 = \mathbb{E}_{q_\phi(\mathbf{z}|\mathbf{x})} \left[\log \frac{p_\theta(\mathbf{x}, \mathbf{z})}{p_\theta(\mathbf{z}|\mathbf{x})} \right].
 $$
 
-– Add and subtract $\log q_\phi(\mathbf{z}|\mathbf{x})$
+- Add and subtract $\log q_\phi(\mathbf{z}|\mathbf{x})$
 
 $$
 \log p_\theta(\mathbf{x}) 
@@ -166,7 +166,7 @@ $$
 - The second term is the KL divergence
 
 $$
-D_{\text{KL}}\!\left(q_\phi(\mathbf{z}|\mathbf{x}) \,\|\, p_\theta(\mathbf{z}|\mathbf{x})\right) = \mathbb{E}_{q_\phi(\mathbf{z}|\mathbf{x})} \left[ \log \frac{q_\phi(\mathbf{z}|\mathbf{x})}{p_\theta(\mathbf{z}|\mathbf{x})} \right].
+D_{\text{KL}}\left(q_\phi(\mathbf{z}|\mathbf{x})|p_\theta(\mathbf{z}|\mathbf{x})\right) = \mathbb{E}_{q_\phi(\mathbf{z}|\mathbf{x})} \left[ \log \frac{q_\phi(\mathbf{z}|\mathbf{x})}{p_\theta(\mathbf{z}|\mathbf{x})} \right].
 $$
 
 Thus:
