@@ -196,7 +196,7 @@ $$
 $$
 
 $$
-\mathcal{L}(\theta,\phi;\mathbf{x}) = \mathbb{E}_{q_\phi(\mathbf{z}|\mathbf{x})} \big[ \log p_\theta(\mathbf{x}|\mathbf{z})\big] + \mathbb{E}_{q_\phi(\mathbf{z}|\mathbf{x})} \big[ \log \frac{p_\theta(\mathbf{z})}{q_\phi(\mathbf{z}|\mathbf{x})} \big]
+\mathcal{L}(\theta,\phi;\mathbf{x}) = \underbrace{ \mathbb{E}_{q_\phi(\mathbf{z}|\mathbf{x})} \big[ \log p_\theta(\mathbf{x}|\mathbf{z})\big]}_{\text{Reconstruction loss}} -  \underbrace{ \mathbb{E}_{q_\phi(\mathbf{z}|\mathbf{x})} \big[ \log \frac{q_\phi(\mathbf{z}|\mathbf{x})}{p_\theta(\mathbf{z})} \big]}_{D_\text{KL}\big(q_\phi(z|x) \parallel p(z)\big)}
 $$
 
 ---
@@ -205,7 +205,7 @@ The **Evidence Lower Bound (ELBO)** is maximized to train the VAE:
 
 $$
 \log p_\theta(x) \geq 
-\mathbb{E}_{q_\phi(z|x)}[\log p_\theta(x|z)] - D_\text{KL}\big(q_\phi(z|x)\,\|\,p(z)\big)
+\mathbb{E}_{q_\phi(z|x)}[\log p_\theta(x|z)] - D_\text{KL}\big(q_\phi(z|x) \parallel p(z)\big)
 $$
 
 The ELBO has two competing terms:  
