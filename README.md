@@ -134,10 +134,12 @@ Since this integral is intractable, we approximate it using **variational infere
 ---
 
 ### 3. Driving the ELBO Loss
+A VAE learns stochastic mapping between an observed $\mathbf{x}$-space (true space), whose empirical distribution $q_{\mathcal{D}}(\mathbf{x})$ is typically complicated, and a $$$\mathbf{z}$-space (latent space), whose distribution can be relatively simple. The generative model learns a joint distribution $p_{\mathbf{\theta}}(\mathbf{x}, \mathbf{z})$ that is often factorized as $p_{\mathbf{\theta}}(\mathbf{x}, \mathbf{z}) = p_{\mathbf{\theta}}(\mathbf{z}) p_{\mathbf{\theta}}(\mathbf{x}|\mathbf{z})$, with a prior distribution over latent space $p_{\mathbf{\theta}}(\mathbf{z})$, a stochastic decoder $p_{\mathbf{\theta}}(\mathbf{x}|\mathbf{z})$. The stochastic encoder $q_{\mathbf{\phi}}(\mathbf{z}|\mathbf{x})$, also called **inference model**, approximates the true but intractable posterior $p_{\mathbf{\theta}}(\mathbf{z}|\mathbf{x})$ of the generative model.
 
 <p align="center">
-  <img src="assets/VAE-ELBO.png" width="400">
+  <img src="assets/VAE-ELBO.png" width="500">
 </p>
+
 
 The **Evidence Lower Bound (ELBO)** is maximized to train the VAE:
 
