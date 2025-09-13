@@ -196,7 +196,7 @@ vae-3d-bmp
 │   └── utils
 │       └── data_loader.py # Utility functions for loading and preprocessing data
 ├── data
-│   ├── data3D200          # Directory containing 3D BMP images ($200^3$) (LUH/IBNM website)
+│   ├── data3D200          # Directory containing 3D BMP images ($200^3$) (email me: phu.thien.nguyen@irtg2657.uni-hannover.de)
 │   ├── data3D200.csv      # Effective Properties for 3D BMP images ($200^3$)
 │   ├── syn-data.ipynb     # Notebook for creating synthetic data ($100^3$), random pore position is uniform distribution
 ├── requirements.txt       # Lists the required Python dependencies and data information
