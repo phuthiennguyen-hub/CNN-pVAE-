@@ -142,14 +142,23 @@ A VAE learns stochastic mapping between an observed $\mathbf{x}$-space (true spa
 
 For any choice of **inference model**, including the choice of variational parameters $\mathbf{\phi}$, we have:
 
+- The log marginal likelihood can be expressed as an expectation
 $$
 \log p_\theta(\mathbf{x}) 
 = \mathbb{E}_{q_\phi(\mathbf{z}|\mathbf{x})} \big[ \log p_\theta(\mathbf{x}) \big].
+$$
 
+- Since $\log p_\theta(\mathbf{x})$ is constant w.r.t. $\mathbf{z}$, we can rewrite
+
+$$
 \log p_\theta(\mathbf{x})
 = \mathbb{E}_{q_\phi(\mathbf{z}|\mathbf{x})} 
 \left[ \log \frac{p_\theta(\mathbf{x}, \mathbf{z})}{p_\theta(\mathbf{z}|\mathbf{x})} \right]
+$$
 
+– Add and subtract $\log q_\phi(\mathbf{z}|\mathbf{x})$
+
+$$
 \log p_\theta(\mathbf{x}) 
 = \mathbb{E}_{q_\phi(\mathbf{z}|\mathbf{x})} 
 \left[ \log \frac{p_\theta(\mathbf{x}, \mathbf{z})}{q_\phi(\mathbf{z}|\mathbf{x})} \right]
@@ -157,6 +166,32 @@ $$
 \left[ \log \frac{q_\phi(\mathbf{z}|\mathbf{x})}{p_\theta(\mathbf{z}|\mathbf{x})} \right].
 $$
 
+- The second term is the KL divergence
+
+$$
+D_{\text{KL}}\!\left(q_\phi(\mathbf{z}|\mathbf{x}) \,\|\, p_\theta(\mathbf{z}|\mathbf{x})\right) 
+= \mathbb{E}_{q_\phi(\mathbf{z}|\mathbf{x})} 
+\left[ \log \frac{q_\phi(\mathbf{z}|\mathbf{x})}{p_\theta(\mathbf{z}|\mathbf{x})} \right].
+$$
+
+Thus:
+
+$$
+\log p_\theta(\mathbf{x})
+= \underbrace{ \mathbb{E}_{q_\phi(\mathbf{z}|\mathbf{x})} 
+\left[ \log \frac{p_\theta(\mathbf{x}, \mathbf{z})}{q_\phi(\mathbf{z}|\mathbf{x})} \right] }_{\mathcal{L}(\theta,\phi;\mathbf{x}) \;\;\text{(ELBO)}}
++ D_{\text{KL}}\!\left(q_\phi(\mathbf{z}|\mathbf{x}) \,\|\, p_\theta(\mathbf{z}|\mathbf{x})\right).
+$$
+
+Expanding the joint $p_\theta(\mathbf{x}, \mathbf{z}) = p_\theta(\mathbf{x}|\mathbf{z})p_\theta(\mathbf{z})$, we get:
+
+$$
+\mathcal{L}(\theta,\phi;\mathbf{x})
+= \mathbb{E}_{q_\phi(\mathbf{z}|\mathbf{x})} \big[ \log p_\theta(\mathbf{x}|\mathbf{z}) \big]
+- D_{\text{KL}}\!\left(q_\phi(\mathbf{z}|\mathbf{x}) \,\|\, p_\theta(\mathbf{z})\right).
+$$
+
+---
 
 The **Evidence Lower Bound (ELBO)** is maximized to train the VAE:
 
