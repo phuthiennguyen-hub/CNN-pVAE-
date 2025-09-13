@@ -135,6 +135,10 @@ Since this integral is intractable, we approximate it using **variational infere
 
 ### 3. Driving the ELBO Loss
 
+<p align="center">
+  <img src="assets/VAE-ELBO.png" width="400">
+</p>
+
 The **Evidence Lower Bound (ELBO)** is maximized to train the VAE:
 
 $$
