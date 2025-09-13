@@ -126,7 +126,7 @@ Instead, VAE introduces a **variational distribution** $q_\phi(z|x)$ parameteriz
 The true log-likelihood is:
 
 $$
-\log p_\theta(x) = \log p_\theta(x,z)dz = \log \int p_\theta(x|z)p(z)dz
+\log p_\theta(x) = \log \int p_\theta(x,z)dz = \log \int p_\theta(x|z)p(z)dz
 $$
 
 Since this integral is intractable, we approximate it using **variational inference**, where the encoder learns $q_\phi(z|x)$.
