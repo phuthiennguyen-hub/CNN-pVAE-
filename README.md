@@ -245,7 +245,7 @@ D_\text{KL} = \mathbb{E}_q \left( \log \frac{\sigma_p}{\sigma_q} - \frac{(\mathb
 $$
 
 $$
-D_\text{KL} = \log \frac{\sigma_p}{\sigma_q} - \frac{\mathbb{E}_q \left[ (\mathbf{x}-\mu_q)^2 \right]}{2{\sigma_q}^2} + \frac{\mathbb{E}_q \left[ (\mathbf{x}-\{\mu_p})^2 \right]}{2{\sigma_p}^2} \right]
+D_\text{KL} = \log \frac{\sigma_p}{\sigma_q} - \frac{\mathbb{E}_q \left[ (\mathbf{x}-\mu_q)^2 \right]}{2{\sigma_q}^2} + \frac{\mathbb{E}_q \left[ (\mathbf{x}-\{\mu_p})^2 \right]}{2{\sigma_p}^2} 
 $$
 
 $$
@@ -253,7 +253,7 @@ D_\text{KL} = \log \frac{\sigma_p}{\sigma_q} - \frac{1}{2} + \frac{1}{2{\sigma_p
 $$
 
 $$
-D_\text{KL} = \log \frac{\sigma_p}{\sigma_q} - \frac{1}{2} + \frac{1}{2{\sigma_p}^2} \mathbb{E}_q \left[ (\mathbf{x}-\{\mu_q})^2 + 2{\mu_q - \mu_p}\mathbb{E}_q \left[ \mathbf{x} - \mu_q \right] + (\mu_q - \mu_p)^2 \right] \right]
+D_\text{KL} = \log \frac{\sigma_p}{\sigma_q} - \frac{1}{2} + \frac{1}{2{\sigma_p}^2} \mathbb{E}_q \left[ (\mathbf{x}-\{\mu_q})^2 + 2{\mu_q - \mu_p}\mathbb{E}_q \left[ \mathbf{x} - \mu_q \right] + (\mu_q - \mu_p)^2 \right]
 $$
 
 $$
