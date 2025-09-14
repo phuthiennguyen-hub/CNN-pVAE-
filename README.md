@@ -260,7 +260,7 @@ $$
 D_\text{KL} = \log \frac{\sigma_p}{\sigma_q} - \frac{1}{2} + \frac{{\sigma_q}^2 + (\mu_q - \mu_p)^2}{2{\sigma_p}^2}
 $$
 
-With the prior as **Standard normal**, $p_{\mathbf{z}}$ \sim \mathcal{N} (\mu_p = 0, {\sigma_p}^2 = 1)
+With the prior as **Standard normal**, $p_{\mathbf{z}} \sim \mathcal{N} (\mu_p = 0, {\sigma_p}^2 = 1)$
 
 $$
 D_\text{KL} = \log \frac{1}{\sigma_q} - \frac{1}{2} + \frac{{\sigma_q}^2+ {\mu_q}^2}{2}
