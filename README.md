@@ -270,7 +270,7 @@ $$
 D_\text{KL} = \frac{1}{2} \left[ \log \frac{1}{{\sigma_q}^2} -1 + {\sigma_q}^2+ {\mu_q}^2 \right] 
 $$
 
-This term is added to the reconstruction loss to form the full VAE objective.
+For other kernel, we need to drive the KL divergence according to it. 
 
 ---
 
