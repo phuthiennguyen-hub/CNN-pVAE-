@@ -253,7 +253,7 @@ D_\text{KL} = \log \frac{\sigma_p}{\sigma_q} - \frac{1}{2} + \frac{1}{2{\sigma_p
 $$
 
 $$
-D_\text{KL} = \log \frac{\sigma_p}{\sigma_q} - \frac{1}{2} + \frac{1}{2{\sigma_p}^2} \mathbb{E}_q \left[ (\mathbf{x}-\{\mu_q})^2 + 2{\mu_q - \mu_p}\mathbb{E}_q \left[ \mathbf{x} - \mu_q \right] + (\mu_q - \mu_p)^2 \right]
+D_\text{KL} = \log \frac{\sigma_p}{\sigma_q} - \frac{1}{2} + \frac{1}{2{\sigma_p}^2} \mathbb{E}_q \left[{\underbrace{(\mathbf{x}-\{\mu_q})^2}_{{\sigma_q}^2}} + 2(\mu_q - \mu_p){\underbrace{\mathbb{E}_q \left[ \mathbf{x} - \mu_q \right]}_{0}} + (\mu_q - \mu_p)^2 \right]
 $$
 
 $$
