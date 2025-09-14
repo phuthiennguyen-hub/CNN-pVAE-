@@ -218,10 +218,10 @@ Thus, the VAE balances reconstruction quality with latent space regularization.
 
 ### 4. KL Divergence for Standard Normal
 
-When the prior is chosen as $p(\mathbf{z}) = \mathcal{N}(\mathbf{\mu}_{p}, {\mathbf{\sigma}_{p}}^2)$ and the encoder outputs a Gaussian $q_\phi(\mathbf{z}|\mathbf{x}) = \mathcal{N}(\mathbf{\mu}_{q}, {\sigma_{q}}^2)$, the KL divergence has a closed form:
+When the prior is chosen as $p(\mathbf{z}) = \mathcal{N}(\mu_{p}, {\sigma_{p}}^2)$ and the encoder outputs a Gaussian $q_\phi(\mathbf{z}|\mathbf{x}) = \mathcal{N}(\mu_{q}, {\sigma_{q}}^2)$, the KL divergence has a closed form:
 
 $$
-D_\text{KL}\big(\mathcal{N}(\mu_{q}, {\sigma_{q}}^2) \parallel \mathcal{N}(\mathbf{\mu}_{p}, \mathbf{\sigma}_{p}}^2)\big)
+D_\text{KL}\big(\mathcal{N}(\mu_{q}, {\sigma_{q}}^2) \parallel \mathcal{N}(\mu_{p}, {\sigma_{p}}^2)\big)
 $$
 
 $$
@@ -231,11 +231,11 @@ $$
 Given a dataset with i.i.d data (discete variable):
 
 $$
-D_\text{KL}\big(q_\phi(\mathbf{z}|\mathbf{x}) \parallel p(\mathbf{z})\big) = \sum_{\mathbf{x} \in \mathbb{D}} \frac{1}{\sqrt{2\pi{\sigma_q}^2}} e^{-\frac{1}{2}{\left( \frac{\mathbf{x} - \mu_q}{\sigma_q} \right)}^2} \log \big[ \frac{ \frac{1}{\sqrt{2\pi\{sigma_q}^2}} e^{-\frac{1}{2}{\left( \frac{\mathbf{x} - \mu}{\sigma_q} \right)}^2}}{ \frac{1}{\sqrt{2\pi\mathbf{\sigmq_p}^2}} e^{-\frac{1}{2}{\left( \frac{x - \mathbf{\mu_p}}{\mathbf{\sigma_p}} \right)}^2}} \big]
+D_\text{KL}\big(q_\phi(\mathbf{z}|\mathbf{x}) \parallel p(\mathbf{z})\big) = \sum_{\mathbf{x} \in \mathbb{D}} \frac{1}{\sqrt{2\pi{\sigma_q}^2}} e^{-\frac{1}{2}{\left( \frac{\mathbf{x} - \mu_q}{\sigma_q} \right)}^2} \log \big[ \frac{ \frac{1}{\sqrt{2\pi{\sigma_q}^2}} e^{-\frac{1}{2}{\left( \frac{\mathbf{x} - \mu_q}{\sigma_q} \right)}^2}}{ \frac{1}{\sqrt{2\pi{\sigma_p}^2}} e^{-\frac{1}{2}{\left( \frac{x - \mu_p}{\sigma_p} \right)}^2}} \big]
 $$
 
 $$
-D_\text{KL}\big(q_\phi(\mathbf{z}|\mathbf{x}) \parallel p(\mathbf{z})\big) = \sum_{\mathbf{x} \in \mathbb{D}} \frac{1}{\sqrt{2\pi{\sigma_q}^2}} e^{-\frac{1}{2}{\left( \frac{\mathbf{x} - \mu_q}{\sigma_q} \right)}^2} \big( \log \frac{\mathbf{\sigma_p}}{\sigma_q} - \frac{(\mathbf{x}-\mu_q)^2}{2{\sigma_q}^2} + \frac{(\mathbf{x}-\mathbf{\mu_p})^2}{2\mathbf{\sigma_p}^2} \big)
+D_\text{KL}\big(q_\phi(\mathbf{z}|\mathbf{x}) \parallel p(\mathbf{z})\big) = \sum_{\mathbf{x} \in \mathbb{D}} \frac{1}{\sqrt{2\pi{\sigma_q}^2}} e^{-\frac{1}{2}{\left( \frac{\mathbf{x} - \mu_q}{\sigma_q} \right)}^2} \big( \log \frac{\sigma_p}{\sigma_q} - \frac{(\mathbf{x}-\mu_q)^2}{2{\sigma_q}^2} + \frac{(\mathbf{x}-\{\mu_p})^2}{2{\sigma_p}^2} \big)
 $$
 
 $$
