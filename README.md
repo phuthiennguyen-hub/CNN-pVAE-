@@ -231,11 +231,11 @@ $$
 Given a dataset with i.i.d data (discete variable):
 
 $$
-D_\text{KL}\big(q_\phi(\mathbf{z}|\mathbf{x}) \parallel p(\mathbf{z})\big) = \sum_{\mathbf{x} \in \mathbb{D}} \frac{1}{\sqrt{2\pi{\sigma_q}^2}} e^{-\frac{1}{2}{\left( \frac{\mathbf{x} - \mu_q}{\sigma_q} \right)}^2} \log \big[ \frac{ \frac{1}{\sqrt{2\pi{\sigma_q}^2}} e^{-\frac{1}{2}{\left( \frac{\mathbf{x} - \mu_q}{\sigma_q} \right)}^2}}{ \frac{1}{\sqrt{2\pi{\sigma_p}^2}} e^{-\frac{1}{2}{\left( \frac{x - \mu_p}{\sigma_p} \right)}^2}} \big]
+D_\text{KL}\big(q_\phi(\mathbf{z}|\mathbf{x}) \parallel p(\mathbf{z})\big) = \sum_{\mathbf{x} \in \mathbb{D}} \frac{1}{\sqrt{2\pi{\sigma_q}^2}} e^{-\frac{1}{2}{\left( \frac{\mathbf{x} - \mu_q}{\sigma_q} \right)}^2} \log \left[ \frac{ \frac{1}{\sqrt{2\pi{\sigma_q}^2}} e^{-\frac{1}{2}{\left( \frac{\mathbf{x} - \mu_q}{\sigma_q} \right)}^2}}{ \frac{1}{\sqrt{2\pi{\sigma_p}^2}} e^{-\frac{1}{2}{\left( \frac{x - \mu_p}{\sigma_p} \right)}^2}} \right]
 $$
 
 $$
-D_\text{KL}\big(q_\phi(\mathbf{z}|\mathbf{x}) \parallel p(\mathbf{z})\big) = \sum_{\mathbf{x} \in \mathbb{D}} \frac{1}{\sqrt{2\pi{\sigma_q}^2}} e^{-\frac{1}{2}{\left( \frac{\mathbf{x} - \mu_q}{\sigma_q} \right)}^2} \big( \log \frac{\sigma_p}{\sigma_q} - \frac{(\mathbf{x}-\mu_q)^2}{2{\sigma_q}^2} + \frac{(\mathbf{x}-\{\mu_p})^2}{2{\sigma_p}^2} \big)
+D_\text{KL}\left(q_\phi(\mathbf{z}|\mathbf{x}) \parallel p(\mathbf{z})\right) = \sum_{\mathbf{x} \in \mathbb{D}} \frac{1}{\sqrt{2\pi{\sigma_q}^2}} e^{-\frac{1}{2}{\left( \frac{\mathbf{x} - \mu_q}{\sigma_q} \right)}^2} \left( \log \frac{\sigma_p}{\sigma_q} - \frac{(\mathbf{x}-\mu_q)^2}{2{\sigma_q}^2} + \frac{(\mathbf{x}-\{\mu_p})^2}{2{\sigma_p}^2} \right)
 $$
 
 $$
