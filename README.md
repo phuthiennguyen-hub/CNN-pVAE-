@@ -361,9 +361,9 @@ The pVAE consists of a variational autoencoder (VAE) and a regressor. The VAE in
 ---
 
 **Reference:**  
-[4]. P.T. Nguyen, Y. Heider, D. Kochmann, and F. Aldakheel, Deep learning-aided inverse design of porous metamaterials, CMAME, (2025)
+[4] P.T. Nguyen, Y. Heider, D. Kochmann, and F. Aldakheel, Deep learning-aided inverse design of porous metamaterials, CMAME, (2025)
 
-[5]. P.T. Nguyen, B.-e. Ayouch, Y. Heider, and F. Aldakheel, Impact of Dataset Size and Hyperparameters Tuning in a VAE for Structure-Property Mapping in Porous Metamaterials, PAMM, (2025)
+[5] P.T. Nguyen, B.-e. Ayouch, Y. Heider, and F. Aldakheel, Impact of Dataset Size and Hyperparameters Tuning in a VAE for Structure-Property Mapping in Porous Metamaterials, PAMM, (2025)
 
 ---
 
