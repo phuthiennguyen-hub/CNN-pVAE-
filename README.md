@@ -188,15 +188,15 @@ $$
 Expanding the joint $p_\theta(\mathbf{x}, \mathbf{z}) = p_\theta(\mathbf{x}|\mathbf{z})p_\theta(\mathbf{z})$, we get:
 
 $$
-\mathcal{L}(\theta,\phi;\mathbf{x}) = \mathbb{E}_{q_\phi(\mathbf{z}|\mathbf{x})} \big[ \log \frac{p_\theta(\mathbf{x}|\mathbf{z}) p_\theta(\mathbf{z})}{q_\phi(\mathbf{z}|\mathbf{x})} \big]
+\mathcal{L}(\theta,\phi;\mathbf{x}) = \mathbb{E}_{q_\phi(\mathbf{z}|\mathbf{x})} \left[ \log \frac{p_\theta(\mathbf{x}|\mathbf{z}) p_\theta(\mathbf{z})}{q_\phi(\mathbf{z}|\mathbf{x})} \right]
 $$
 
 $$
-\mathcal{L}(\theta,\phi;\mathbf{x}) = \mathbb{E}_{q_\phi(\mathbf{z}|\mathbf{x})} \big[ \log p_\theta(\mathbf{x}|\mathbf{z})\big] + \mathbb{E}_{q_\phi(\mathbf{z}|\mathbf{x})} \big[ \log \frac{p_\theta(\mathbf{z})}{q_\phi(\mathbf{z}|\mathbf{x})} \big]
+\mathcal{L}(\theta,\phi;\mathbf{x}) = \mathbb{E}_{q_\phi(\mathbf{z}|\mathbf{x})} \left[ \log p_\theta(\mathbf{x}|\mathbf{z})\right] + \mathbb{E}_{q_\phi(\mathbf{z}|\mathbf{x})} \left[ \log \frac{p_\theta(\mathbf{z})}{q_\phi(\mathbf{z}|\mathbf{x})} \right]
 $$
 
 $$
-\mathcal{L}(\theta,\phi;\mathbf{x}) = \underbrace{ \mathbb{E}_{q_\phi(\mathbf{z}|\mathbf{x})} \big[ \log p_\theta(\mathbf{x}|\mathbf{z})\big]}_{\text{Reconstruction loss}} -  \underbrace{ \mathbb{E}_{q_\phi(\mathbf{z}|\mathbf{x})} \big[ \log \frac{q_\phi(\mathbf{z}|\mathbf{x})}{p_\theta(\mathbf{z})} \big]}_{D_\text{KL}\big(q_\phi(z|x) \parallel p(z)\big)}
+\mathcal{L}(\theta,\phi;\mathbf{x}) = \underbrace{ \mathbb{E}_{q_\phi(\mathbf{z}|\mathbf{x})} \left[ \log p_\theta(\mathbf{x}|\mathbf{z})\right]}_{\text{Reconstruction loss}} -  \underbrace{ \mathbb{E}_{q_\phi(\mathbf{z}|\mathbf{x})} \left[ \log \frac{q_\phi(\mathbf{z}|\mathbf{x})}{p_\theta(\mathbf{z})} \right]}_{D_\text{KL}\left(q_\phi(z|x) \parallel p(z)\right)}
 $$
 
 ---
@@ -205,7 +205,7 @@ The **Evidence Lower Bound (ELBO)** is maximized to train the VAE:
 
 $$
 \log p_\theta(\mathbf{x}) \geq 
-\mathbb{E}_{q_\phi(\mathbf{z}|\mathbf{x})}[\log p_\theta(\mathbf{x}|\mathbf{z})] - D_\text{KL}\big(q_\phi(\mathbf{z}|\mathbf{x}) \parallel p(\mathbf{z})\big)
+\mathbb{E}_{q_\phi(\mathbf{z}|\mathbf{x})}[\log p_\theta(\mathbf{x}|\mathbf{z})] - D_\text{KL}\left(q_\phi(\mathbf{z}|\mathbf{x}) \parallel p(\mathbf{z})\right)
 $$
 
 The ELBO has two competing terms:  
@@ -221,17 +221,17 @@ Thus, the VAE balances reconstruction quality with latent space regularization.
 When the prior is chosen as $p(\mathbf{z}) = \mathcal{N}(\mu_{p}, {\sigma_{p}}^2)$ and the encoder outputs a Gaussian $q_\phi(\mathbf{z}|\mathbf{x}) = \mathcal{N}(\mu_{q}, {\sigma_{q}}^2)$, the KL divergence has a closed form:
 
 $$
-D_\text{KL}\big(\mathcal{N}(\mu_{q}, {\sigma_{q}}^2) \parallel \mathcal{N}(\mu_{p}, {\sigma_{p}}^2)\big)
+D_\text{KL}\left(\mathcal{N}(\mu_{q}, {\sigma_{q}}^2) \parallel \mathcal{N}(\mu_{p}, {\sigma_{p}}^2)\right)
 $$
 
 $$
-D_\text{KL}\big(q_\phi(\mathbf{z}|\mathbf{x}) \parallel p(\mathbf{z})\big) = \mathbb{E}_{q_\phi(\mathbf{z}|\mathbf{x})} \big[ \log \frac{q_\phi(\mathbf{z}|\mathbf{x})}{p(\mathbf{z})} \big]
+D_\text{KL}\left(q_\phi(\mathbf{z}|\mathbf{x}) \parallel p(\mathbf{z})\right) = \mathbb{E}_{q_\phi(\mathbf{z}|\mathbf{x})} \left[ \log \frac{q_\phi(\mathbf{z}|\mathbf{x})}{p(\mathbf{z})} \right]
 $$
 
 Given a dataset with i.i.d data (discete variable):
 
 $$
-D_\text{KL}\big(q_\phi(\mathbf{z}|\mathbf{x}) \parallel p(\mathbf{z})\big) = \sum_{\mathbf{z}} \frac{1}{\sqrt{2\pi{\sigma_q}^2}} e^{-\frac{1}{2}{\left( \frac{\mathbf{x} - \mu_q}{\sigma_q} \right)}^2} \log \left[ \frac{ \frac{1}{\sqrt{2\pi{\sigma_q}^2}} e^{-\frac{1}{2}{\left( \frac{\mathbf{x} - \mu_q}{\sigma_q} \right)}^2}}{ \frac{1}{\sqrt{2\pi{\sigma_p}^2}} e^{-\frac{1}{2}{\left( \frac{x - \mu_p}{\sigma_p} \right)}^2}} \right]
+D_\text{KL}\left(q_\phi(\mathbf{z}|\mathbf{x}) \parallel p(\mathbf{z})\right) = \sum_{\mathbf{z}} \frac{1}{\sqrt{2\pi{\sigma_q}^2}} e^{-\frac{1}{2}{\left( \frac{\mathbf{x} - \mu_q}{\sigma_q} \right)}^2} \log \left[ \frac{ \frac{1}{\sqrt{2\pi{\sigma_q}^2}} e^{-\frac{1}{2}{\left( \frac{\mathbf{x} - \mu_q}{\sigma_q} \right)}^2}}{ \frac{1}{\sqrt{2\pi{\sigma_p}^2}} e^{-\frac{1}{2}{\left( \frac{x - \mu_p}{\sigma_p} \right)}^2}} \right]
 $$
 
 $$
