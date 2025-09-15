@@ -54,6 +54,8 @@ Thus, $\mathbf{K}^S$ can be determined from the relationship between the average
 *Investigating the impact of deformation on foam permeability through CT scans and the Lattice–Boltzmann method*.  
 PAMM, 2023. [https://doi.org/10.1002/pamm.202300154]
 
+---
+
 ## A surrogated model: Multiscale CNN-based intrinsic permeability prediction
 
 <p align="center">
@@ -68,6 +70,8 @@ To overcome the challenging and computationally expensive of numerical model, we
 [2] Yousef Heider, Fadi Aldakheel, Wolfgang Ehlers.
 *A multiscale CNN-based intrinsic permeability prediction in deformable porous media*
 Applied Sciences, 15(5):2589, 2025.
+
+---
 
 ## Variational autoencoder (VAE)
 
@@ -359,6 +363,8 @@ The pVAE consists of a variational autoencoder (VAE) and a regressor. The VAE in
 [4]. P.T. Nguyen, Y. Heider, D. Kochmann, and F. Aldakheel, Deep learning-aided inverse design of porous metamaterials, CMAME, (2025)
 
 [5]. P.T. Nguyen, B.-e. Ayouch, Y. Heider, and F. Aldakheel, Impact of Dataset Size and Hyperparameters Tuning in a VAE for Structure-Property Mapping in Porous Metamaterials, PAMM, (2025)
+
+---
 
 ## License
 
