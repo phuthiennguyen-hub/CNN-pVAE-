@@ -332,7 +332,7 @@ pVAE
 1. Clone the repository:
    ```
    git clone <repository-url>
-   cd vae-3d-bmp
+   cd cd ptnguyen-pvae-3d-viscoelastic-open-foam
    ```
 
 2. Install the required dependencies:
