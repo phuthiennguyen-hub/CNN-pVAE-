@@ -60,6 +60,8 @@ PAMM, 2023. [https://doi.org/10.1002/pamm.202300154]
   <img src="assets/CNN-Structure_initial.png" width="600">
 </p>
 
+To overcome the challenging and computationally expensive of numerical model, we applied a surrogate model that can be used to obtain the Intrinsic permeability faster. In particular, a CNN model is used to predict these values from the binary image instead of TPM-LBM. For more details, please check [2]  
+
 **Reference:**  
 [2] Yousef Heider, Fadi Aldakheel, Wolfgang Ehlers.
 *A multiscale CNN-based intrinsic permeability prediction in deformable porous media*
@@ -70,7 +72,10 @@ Applied Sciences, 15(5):2589, 2025.
 The Variational Autoencoder (VAE), introduced in 2013, is one of the most influential generative models.  
 It combines **deep learning** with **probabilistic inference**, enabling the mapping between high-dimensional data and a structured latent space.  
 
-For more details, see: Kingma & Welling (2013), *Auto-Encoding Variational Bayes*.  
+For more details, see [3]. 
+
+**Reference:**  
+[3] Kingma & Welling (2013), *Auto-Encoding Variational Bayes*.  
 
 ---
 
