@@ -300,6 +300,7 @@ For other kernel, we need to drive the KL divergence according to it.
  Coded by Phu Thien Nguyen with the help of Copilot :smiley:
 
  Paper: Deep learning-aided inverse design of porous metamaterials
+ 
  The authors are:
  Phu Thien Nguyen, Yousef Heider, Dennis Kochmann, Fadi Aldakheel
 
