@@ -50,7 +50,7 @@ Thus, $\mathbf{K}^S$ can be determined from the relationship between the average
 ---
 
 **Reference:**  
-Nguyen Thien Phu, Uwe Navrath, Yousef Heider, Julaluk Carmai, Bernd Markert.  
+[1] Nguyen Thien Phu, Uwe Navrath, Yousef Heider, Julaluk Carmai, Bernd Markert.  
 *Investigating the impact of deformation on foam permeability through CT scans and the Lattice–Boltzmann method*.  
 PAMM, 2023. [https://doi.org/10.1002/pamm.202300154]
 
@@ -61,7 +61,7 @@ PAMM, 2023. [https://doi.org/10.1002/pamm.202300154]
 </p>
 
 **Reference:**  
-Yousef Heider, Fadi Aldakheel, Wolfgang Ehlers.
+[2] Yousef Heider, Fadi Aldakheel, Wolfgang Ehlers.
 *A multiscale CNN-based intrinsic permeability prediction in deformable porous media*
 Applied Sciences, 15(5):2589, 2025.
 
@@ -347,9 +347,9 @@ python src/evaluate.py
 The pVAE consists of a variational autoencoder (VAE) and a regressor. The VAE includes an encoder that compresses input images into a latent space and a decoder that reconstructs images from this latent representation. In addition to minimizing the reconstruction loss and the Kullback-Leibler divergence, the latent space is used by a regressor to predict effective material properties directly from the encoded representations. This joint framework enables both image reconstruction and property prediction, facilitating structure-property mapping and inverse design.
 
 **Reference:**  
-[1]. P.T. Nguyen, Y. Heider, D. Kochmann, and F. Aldakheel, Deep learning-aided inverse design of porous metamaterials, CMAME, (2025)
+[3]. P.T. Nguyen, Y. Heider, D. Kochmann, and F. Aldakheel, Deep learning-aided inverse design of porous metamaterials, CMAME, (2025)
 
-[2]. P.T. Nguyen, B.-e. Ayouch, Y. Heider, and F. Aldakheel, Impact of Dataset Size and Hyperparameters Tuning in a VAE for Structure-Property Mapping in Porous Metamaterials, PAMM, (2025)
+[4]. P.T. Nguyen, B.-e. Ayouch, Y. Heider, and F. Aldakheel, Impact of Dataset Size and Hyperparameters Tuning in a VAE for Structure-Property Mapping in Porous Metamaterials, PAMM, (2025)
 
 ## License
 
