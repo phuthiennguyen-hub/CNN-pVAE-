@@ -332,7 +332,7 @@ pVAE
 1. Clone the repository:
    ```
    git clone <repository-url>
-   cd cd ptnguyen-pvae-3d-viscoelastic-open-foam
+   cd CNN-pVAE-
    ```
 
 2. Install the required dependencies:
