@@ -249,7 +249,7 @@ $$
 D_\text{KL}\left(q_\phi(\mathbf{z}|\mathbf{x}) \parallel p(\mathbf{z})\right) = \sum_{\mathbf{z}} \frac{1}{\sqrt{2\pi{\sigma_q}^2}} e^{-\frac{1}{2}{\left( \frac{\mathbf{x} - \mu_q}{\sigma_q} \right)}^2} \left( \log \frac{\sigma_p}{\sigma_q} - \frac{(\mathbf{x}-\mu_q)^2}{2{\sigma_q}^2} + \frac{(\mathbf{x}-\{\mu_p})^2}{2{\sigma_p}^2} \right)
 $$
 
-We have the Gaussian kernel at the begining.
+We have the Gaussian kernel here.
 
 $$
 D_\text{KL} = \mathbb{E}_q \left( \log \frac{\sigma_p}{\sigma_q} - \frac{(\mathbf{x}-\mu_q)^2}{2{\sigma_q}^2} + \frac{(\mathbf{x}-\{\mu_p})^2}{2{\sigma_p}^2} \right)
