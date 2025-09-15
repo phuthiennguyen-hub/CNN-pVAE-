@@ -295,7 +295,7 @@ For other kernel, we need to drive the KL divergence according to it.
 ## Project Structure
 
 ```
-vae-3d-bmp
+pVAE
 ├── src
 │   ├── model.py           # Defines the VAE architecture
 │   ├── train.py           # Contains the training loop for the VAE
